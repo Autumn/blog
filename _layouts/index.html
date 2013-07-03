@@ -1,0 +1,68 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>
+{{page.title}}
+</title>
+<link href="{{site.baseurl}}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{{site.baseurl}}/styles/style.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<link rel='alternate' type='application/rss+xml' title='Forever Beta' href='{{site.baseurl}}/feed.xml' />
+</head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="{{site.baseurl}}/bootstrap/js/bootstrap.min.js"></script>
+<body>
+
+<div class="row offset2 center">
+<div class="span12">
+
+{% include header.html %}
+
+<hr/>
+
+{% include nav.html %}
+
+<hr/>
+
+<div class="row">
+<div class="span12 bodytext">
+{% for page in site.posts limit:1 %}
+  <h3><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></h3>
+  <h4>{{page.date | date: "%d %b %y"}}</h5>
+  {{page.content}}
+{% endfor %}
+</div>
+</div>
+
+<hr/>
+
+<div class="row pagination-centered">
+<div class="span8">
+<div class="container">
+<ul style="list-style:none;">
+{% for page in site.posts %}
+  <li><span style="font-style:italic;">{{page.date | date: "%d %b %y"}}</span> → <a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
+
+<hr/>
+
+{% include links.html %}
+
+<hr/>
+
+{% include footer.html %}
+</div>
+</div>
+
+</body>
+</html>
+

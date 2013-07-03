@@ -1,0 +1,34 @@
+.center {
+  margin-right:auto;
+  margin-left:auto;
+  width:70em;
+}
+
+.transparent-heading {
+  opacity: 0.5;
+  font-style:italic;
+}
+
+body {
+font-family: 'Droid Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+font-family: 'Droid Serif', serif;
+}
+
+.bodytext {
+font-size: 1.1em;
+}
+
+.center-image {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding: 10px;
+}
+
+.center-caption {
+  text-align: center;
+  padding-bottom: 10px;
+}

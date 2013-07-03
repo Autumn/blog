@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>
+{{page.title}} - {{site.custom.title}}
+</title>
+<link href="{{site.baseurl}}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{{site.baseurl}}/styles/style.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel='alternate' type='application/rss+xml' title='ForeverBeta' href='{{site.baseurl}}/feed.xml' />
+</head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="{{site.baseurl}}/bootstrap/js/bootstrap.min.js"></script>
+
+<body>
+
+<div class="row offset2 center">
+<div class="span12">
+{% include header.html %}
+
+<hr/>
+
+{% include nav.html %}
+<hr/>
+
+<!--<div class="row">
+<div class="span12">-->
+  <h4><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></h3>
+  <h5>{{page.date | date: "%d %b %y"}}</h5>
+{{ content }}
+<!--</div>
+</div>-->
+
+<hr/>
+
+<div class="row pagination-centered">
+<div class="span3 offset3">
+<p class="transparent-heading">Would you like to comment?</p>
+<a href="https://twitter.com/intent/tweet?screen_name=akiofthewired" class="twitter-mention-button" data-related="airofaki">Comment on this post</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+</div>
+<div class="span3">
+<p class="transparent-heading">Enjoy the article? Share!</p>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="airofaki">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div>
+
+<hr/>
+
+<div class="row pagination-centered">
+<div class="span6">
+<p class="transparent-heading">Previous<p>
+<p><a href="{{site.baseurl}}{{page.previous.url}}">{{page.previous.title}}</a></p>
+<p>{{page.previous.date | date: "%d %b %y"}}</p>
+</div>
+<div class="span6">
+<p class="transparent-heading">Next</p>
+<p><a href="{{site.baseurl}}{{page.next.url}}">{{page.next.title}}</a></p>
+<p>{{page.next.date | date: "%d %b %y"}}</p>
+</div>
+</div>
+
+<hr/>
+
+{% include links.html %}
+
+<hr/>
+
+{% include footer.html %}
+</div>
+</div>
+
+</body>
+</html>
+

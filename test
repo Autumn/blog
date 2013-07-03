@@ -1,0 +1,3 @@
+rm -rf /var/www/test
+jekyll serve
+mv serve /var/www/test

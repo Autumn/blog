@@ -1,0 +1,2 @@
+#!/bin/bash
+jekyll && rm -rf /var/www/_site && mv _site /var/www/_site
